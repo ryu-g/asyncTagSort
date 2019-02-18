@@ -243,7 +243,7 @@ function switch_hello() {
     } else {
       items_hello[i].style.visibility = "hidden";
       items_hello[i].style.width = "0px";
-      items_hello[i].style.margin = "0px";
+      items_hello[i].style.margin = "10px 0px";
     }
   }
 }
@@ -257,7 +257,7 @@ function switch_poster() {
     } else {
       items_poster[i].style.visibility = "hidden";
       items_poster[i].style.width = "0px";
-      items_poster[i].style.margin = "0px";
+      items_poster[i].style.margin = "10px 0px";
     }
   }
 }
@@ -271,7 +271,7 @@ function switch_webpage() {
     } else {
       items_webpage[i].style.visibility = "hidden";
       items_webpage[i].style.width = "0px";
-      items_webpage[i].style.margin = "0px";
+      items_webpage[i].style.margin = "10px 0px";
     }
   }
 }
@@ -285,7 +285,7 @@ function switch_other() {
     } else {
       items_other[i].style.visibility = "hidden";
       items_other[i].style.width = "0px";
-      items_other[i].style.margin = "0px";
+      items_other[i].style.margin = "10px 0px";
     }
   }
 }
@@ -299,7 +299,7 @@ function switch_cd() {
     } else {
       items_cd[i].style.visibility = "hidden";
       items_cd[i].style.width = "0px";
-      items_cd[i].style.margin = "0px";
+      items_cd[i].style.margin = "10px 0px";
     }
   }
 }
