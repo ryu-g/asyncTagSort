@@ -1,0 +1,22 @@
+{
+  "name": "asynctagsort",
+  "version": "1.0.0",
+  "description": "try to sort items with async",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.pug --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryu-g/asyncTagSort.git"
+  },
+  "author": "ryu-g",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryu-g/asyncTagSort/issues"
+  },
+  "homepage": "https://github.com/ryu-g/asyncTagSort#readme",
+  "devDependencies": {
+    "sass": "^1.17.0"
+  }
+}

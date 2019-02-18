@@ -1,0 +1,58 @@
+*
+	user-select: none
+.selectable
+	user-select: auto
+section
+	width: 80%
+	max-width: 1200px
+	margin: 0 auto
+
+input
+	display: none
+
+.test
+	padding: 20px
+	background-color: #eee
+	&:hover
+		background-color: #28dd2a
+
+
+.sortController
+	display: flex
+	margin: 0 auto
+	.checker
+		margin: 10px
+		label
+			transition: 150ms
+			position: relative
+			padding: 10px
+			color: #333
+			cursor: pointer
+			&::before
+				content:"- "
+				color: #fff
+
+			&:hover
+				color: orange
+		input:checked + label
+			color: orange
+			&::before
+				content:"- "
+				color: orange
+
+
+.itemList
+	display: flex
+	flex-wrap: wrap
+
+	.item
+		margin: 10px
+	.hello
+	.poster
+	.webpage
+	.other
+	.cd	
+		display: block
+		transition: 250ms
+		
+
