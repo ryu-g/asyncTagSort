@@ -177,7 +177,7 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"script/switchDisplay.js":[function(require,module,exports) {
-var controller = document.getElementsByClassName('sortController')[0];
+var controller = document.getElementById('sortController');
 controller.addEventListener('click', switchDisplay, false);
 var hello = document.getElementById("hello");
 var items_hello = document.getElementsByClassName('hello');
@@ -191,28 +191,11 @@ var cd = document.getElementById("cd");
 var items_cd = document.getElementsByClassName('cd');
 
 function switchDisplay() {
-  console.log("-------");
-
-  for (var i = 0; i < items_hello.length; i++) {
-    console.log(i);
-    if (hello.checked) items_hello[i].style.display = "block";else items_hello[i].style.display = "none";
-  }
-
-  for (var _i = 0; _i < items_poster.length; _i++) {
-    if (poster.checked) items_poster[_i].style.display = "block";else items_poster[_i].style.display = "none";
-  }
-
-  for (var _i2 = 0; _i2 < items_webpage.length; _i2++) {
-    if (webpage.checked) items_webpage[_i2].style.display = "block";else items_webpage[_i2].style.display = "none";
-  }
-
-  for (var _i3 = 0; _i3 < items_other.length; _i3++) {
-    if (other.checked) items_other[_i3].style.display = "block";else items_other[_i3].style.display = "none";
-  }
-
-  for (var _i4 = 0; _i4 < items_cd.length; _i4++) {
-    if (cd.checked) items_cd[_i4].style.display = "block";else items_cd[_i4].style.display = "none";
-  }
+  switch_hello();
+  switch_poster();
+  switch_webpage();
+  switch_other();
+  switch_cd();
 
   if (!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked) {
     displayAll();
@@ -221,23 +204,103 @@ function switchDisplay() {
 
 function displayAll() {
   for (var i = 0; i < items_hello.length; i++) {
-    items_hello[i].style.display = "block";
+    items_hello[i].style.visibility = "visible";
+    items_hello[i].style.width = "30vw";
+    items_hello[i].style.margin = "10px";
   }
 
-  for (var _i5 = 0; _i5 < items_poster.length; _i5++) {
-    items_poster[_i5].style.display = "block";
+  for (var _i = 0; _i < items_poster.length; _i++) {
+    items_poster[_i].style.visibility = "visible";
+    items_poster[_i].style.width = "30vw";
+    items_poster[_i].style.margin = "10px";
   }
 
-  for (var _i6 = 0; _i6 < items_webpage.length; _i6++) {
-    items_webpage[_i6].style.display = "block";
+  for (var _i2 = 0; _i2 < items_webpage.length; _i2++) {
+    items_webpage[_i2].style.visibility = "visible";
+    items_webpage[_i2].style.width = "30vw";
+    items_webpage[_i2].style.margin = "10px";
   }
 
-  for (var _i7 = 0; _i7 < items_other.length; _i7++) {
-    items_other[_i7].style.display = "block";
+  for (var _i3 = 0; _i3 < items_other.length; _i3++) {
+    items_other[_i3].style.visibility = "visible";
+    items_other[_i3].style.width = "30vw";
+    items_other[_i3].style.margin = "10px";
   }
 
-  for (var _i8 = 0; _i8 < items_cd.length; _i8++) {
-    items_cd[_i8].style.display = "block";
+  for (var _i4 = 0; _i4 < items_cd.length; _i4++) {
+    items_cd[_i4].style.visibility = "visible";
+    items_cd[_i4].style.width = "30vw";
+    items_cd[_i4].style.margin = "10px";
+  }
+}
+
+function switch_hello() {
+  for (var i = 0; i < items_hello.length; i++) {
+    if (hello.checked) {
+      items_hello[i].style.visibility = "visible";
+      items_hello[i].style.width = "30vw";
+      items_hello[i].style.margin = "10px";
+    } else {
+      items_hello[i].style.visibility = "hidden";
+      items_hello[i].style.width = "0px";
+      items_hello[i].style.margin = "0px";
+    }
+  }
+}
+
+function switch_poster() {
+  for (var i = 0; i < items_poster.length; i++) {
+    if (poster.checked) {
+      items_poster[i].style.visibility = "visible";
+      items_poster[i].style.width = "30vw";
+      items_poster[i].style.margin = "10px";
+    } else {
+      items_poster[i].style.visibility = "hidden";
+      items_poster[i].style.width = "0px";
+      items_poster[i].style.margin = "0px";
+    }
+  }
+}
+
+function switch_webpage() {
+  for (var i = 0; i < items_webpage.length; i++) {
+    if (webpage.checked) {
+      items_webpage[i].style.visibility = "visible";
+      items_webpage[i].style.width = "30vw";
+      items_webpage[i].style.margin = "10px";
+    } else {
+      items_webpage[i].style.visibility = "hidden";
+      items_webpage[i].style.width = "0px";
+      items_webpage[i].style.margin = "0px";
+    }
+  }
+}
+
+function switch_other() {
+  for (var i = 0; i < items_other.length; i++) {
+    if (other.checked) {
+      items_other[i].style.visibility = "visible";
+      items_other[i].style.width = "30vw";
+      items_other[i].style.margin = "10px";
+    } else {
+      items_other[i].style.visibility = "hidden";
+      items_other[i].style.width = "0px";
+      items_other[i].style.margin = "0px";
+    }
+  }
+}
+
+function switch_cd() {
+  for (var i = 0; i < items_cd.length; i++) {
+    if (cd.checked) {
+      items_cd[i].style.visibility = "visible";
+      items_cd[i].style.width = "30vw";
+      items_cd[i].style.margin = "10px";
+    } else {
+      items_cd[i].style.visibility = "hidden";
+      items_cd[i].style.width = "0px";
+      items_cd[i].style.margin = "0px";
+    }
   }
 }
 },{}],"script/*.js":[function(require,module,exports) {
@@ -277,7 +340,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51204" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49504" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

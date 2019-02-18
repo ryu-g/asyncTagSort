@@ -1,37 +1,43 @@
 *
 	user-select: none
+	margin: 0
+	padding: 0
 .selectable
 	user-select: auto
+
+
+// .stats
+// 	color: red
+
+h1
+	margin: 10px
+
 section
 	width: 80%
 	max-width: 1200px
 	margin: 0 auto
 
+// .stats
+// 	color: blue
+
 input
 	display: none
 
-.test
-	padding: 20px
-	background-color: #eee
-	&:hover
-		background-color: #28dd2a
-
-
-.sortController
+#sortController
 	display: flex
 	margin: 0 auto
 	.checker
 		margin: 10px
 		label
-			transition: 150ms
+			transition: 350ms
 			position: relative
 			padding: 10px
 			color: #333
 			cursor: pointer
 			&::before
+				transition: 300ms
 				content:"- "
 				color: #fff
-
 			&:hover
 				color: orange
 		input:checked + label
@@ -40,19 +46,52 @@ input
 				content:"- "
 				color: orange
 
+.stats
+	color: orange
 
 .itemList
 	display: flex
 	flex-wrap: wrap
-
+	// justify-content: space-around
 	.item
+		max-width: 150px
+		max-height: 150px
+		width: 30vw
+		height: 30vw
 		margin: 10px
-	.hello
-	.poster
-	.webpage
-	.other
-	.cd	
-		display: block
-		transition: 250ms
-		
 
+		&:hover
+			transition: 100ms
+			box-shadow: 5px 5px orange
+		img
+			width: 100%
+			height: 100%
+
+	.hello
+		transition: 250ms
+		display: block
+		
+	.poster
+		transition: 250ms
+		display: block
+		
+	.webpage
+		transition: 250ms
+		display: block
+		
+	.other
+		transition: 250ms
+		display: block
+		
+	.cd	
+		transition: 250ms
+		display: block
+		
+	.brank
+		display: block
+		background-color: #ddd
+		&:hover
+			transition: 100ms
+			box-shadow: none
+.stats
+	color: green

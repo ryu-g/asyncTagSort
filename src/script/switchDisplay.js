@@ -1,5 +1,5 @@
 
-let controller = document.getElementsByClassName('sortController')[0]
+let controller = document.getElementById('sortController')
 controller.addEventListener('click',switchDisplay, false)
 
 	const hello = document.getElementById("hello")
@@ -16,45 +16,13 @@ controller.addEventListener('click',switchDisplay, false)
 
 	const cd = document.getElementById("cd")
 	const items_cd = document.getElementsByClassName('cd')
+
 function switchDisplay(){
-
-
-	console.log("-------")
-	for(let i = 0 ; i < items_hello.length ; i++){
-		console.log(i);
-		if ( hello.checked )
-			items_hello[i].style.display = "block"
-		else
-			items_hello[i].style.display = "none"
-	}
-
-	for(let i = 0 ; i<items_poster.length ; i++){
-		if ( poster.checked )
-			items_poster[i].style.display = "block"
-		else 
-			items_poster[i].style.display = "none"	
-	}
-
-	for(let i = 0 ; i<items_webpage.length ; i++){
-		if ( webpage.checked )
-			items_webpage[i].style.display = "block"
-		else 
-			items_webpage[i].style.display = "none"
-	}
-
-	for(let i = 0 ; i<items_other.length ; i++){
-		if ( other.checked )
-			items_other[i].style.display = "block"
-		else 
-			items_other[i].style.display = "none"	
-	}
- 
-	for(let i = 0 ; i<items_cd.length ; i++){
-		if ( cd.checked )
-			items_cd[i].style.display = "block"
-		else 
-			items_cd[i].style.display = "none"
-	}
+	switch_hello()
+	switch_poster()
+	switch_webpage()
+	switch_other()
+	switch_cd()
 
 	if(!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked){
 		displayAll()
@@ -63,23 +31,110 @@ function switchDisplay(){
 
 function displayAll(){
 	for(let i = 0 ; i < items_hello.length ; i++){
-			items_hello[i].style.display = "block"
+			items_hello[i].style.visibility = "visible"
+			items_hello[i].style.width = "30vw"
+			items_hello[i].style.margin = "10px"
 	}
 
 	for(let i = 0 ; i<items_poster.length ; i++){
-			items_poster[i].style.display = "block"	
+			items_poster[i].style.visibility = "visible"
+			items_poster[i].style.width = "30vw"
+			items_poster[i].style.margin = "10px"
+
 	}
 
 	for(let i = 0 ; i<items_webpage.length ; i++){
-			items_webpage[i].style.display = "block"
+			items_webpage[i].style.visibility = "visible"
+			items_webpage[i].style.width = "30vw"
+			items_webpage[i].style.margin = "10px"
+
 	}
 
 	for(let i = 0 ; i<items_other.length ; i++){
-			items_other[i].style.display = "block"	
+			items_other[i].style.visibility = "visible"
+			items_other[i].style.width = "30vw"
+			items_other[i].style.margin = "10px"
 	}
  
 	for(let i = 0 ; i<items_cd.length ; i++){
-			items_cd[i].style.display = "block"
+			items_cd[i].style.visibility = "visible"
+			items_cd[i].style.width = "30vw"
+			items_cd[i].style.margin = "10px"
+	}
+}
+
+function switch_hello(){
+	for(let i = 0 ; i < items_hello.length ; i++){
+		if ( hello.checked ){
+			items_hello[i].style.visibility = "visible"
+			items_hello[i].style.width = "30vw"
+			items_hello[i].style.margin = "10px"
+		}
+		else{
+			items_hello[i].style.visibility = "hidden"
+			items_hello[i].style.width = "0px"
+			items_hello[i].style.margin = "0px"
+		}
+	}
+}
+
+function switch_poster(){
+	for(let i = 0 ; i<items_poster.length ; i++){
+		if ( poster.checked ){
+			items_poster[i].style.visibility = "visible"
+			items_poster[i].style.width = "30vw"
+			items_poster[i].style.margin = "10px"
+		}
+		else{ 
+			items_poster[i].style.visibility = "hidden"	
+			items_poster[i].style.width = "0px"
+			items_poster[i].style.margin = "0px"
+		}
+	}
+}
+
+function switch_webpage(){
+	for(let i = 0 ; i<items_webpage.length ; i++){
+		if ( webpage.checked ){
+			items_webpage[i].style.visibility = "visible"
+			items_webpage[i].style.width = "30vw"
+			items_webpage[i].style.margin = "10px"
+		}
+		else{ 
+			items_webpage[i].style.visibility = "hidden"
+			items_webpage[i].style.width = "0px"
+			items_webpage[i].style.margin = "0px"
+		}
+	}
+}
+
+function switch_other(){
+	for(let i = 0 ; i<items_other.length ; i++){
+		if ( other.checked ){
+			items_other[i].style.visibility = "visible"
+			items_other[i].style.width = "30vw"
+			items_other[i].style.margin = "10px"
+		}
+		else{ 
+			items_other[i].style.visibility = "hidden"	
+			items_other[i].style.width = "0px"
+			items_other[i].style.margin = "0px"
+		}
+	}
+}
+
+function switch_cd(){
+	for(let i = 0 ; i<items_cd.length ; i++){
+		if ( cd.checked ){
+			items_cd[i].style.visibility = "visible"
+			items_cd[i].style.width = "30vw"
+			items_cd[i].style.margin = "10px"
+		}
+		else{ 
+			items_cd[i].style.visibility = "hidden"
+			items_cd[i].style.width = "0px"
+			items_cd[i].style.margin = "0px"
+		}
 	}
 }
 
