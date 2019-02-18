@@ -198,39 +198,44 @@ function switchDisplay() {
   switch_cd();
 
   if (!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked) {
-    displayAll();
+    displayAllItems();
   }
 }
 
-function displayAll() {
+function displayAllItems() {
   for (var i = 0; i < items_hello.length; i++) {
     items_hello[i].style.visibility = "visible";
     items_hello[i].style.width = "30vw";
     items_hello[i].style.margin = "10px";
+    items_hello[i].style.opacity = "1";
   }
 
   for (var _i = 0; _i < items_poster.length; _i++) {
     items_poster[_i].style.visibility = "visible";
     items_poster[_i].style.width = "30vw";
     items_poster[_i].style.margin = "10px";
+    items_poster[_i].style.opacity = "1";
   }
 
   for (var _i2 = 0; _i2 < items_webpage.length; _i2++) {
     items_webpage[_i2].style.visibility = "visible";
     items_webpage[_i2].style.width = "30vw";
     items_webpage[_i2].style.margin = "10px";
+    items_webpage[_i2].style.opacity = "1";
   }
 
   for (var _i3 = 0; _i3 < items_other.length; _i3++) {
     items_other[_i3].style.visibility = "visible";
     items_other[_i3].style.width = "30vw";
     items_other[_i3].style.margin = "10px";
+    items_other[_i3].style.opacity = "1";
   }
 
   for (var _i4 = 0; _i4 < items_cd.length; _i4++) {
     items_cd[_i4].style.visibility = "visible";
     items_cd[_i4].style.width = "30vw";
     items_cd[_i4].style.margin = "10px";
+    items_cd[_i4].style.opacity = "1";
   }
 }
 
@@ -240,10 +245,12 @@ function switch_hello() {
       items_hello[i].style.visibility = "visible";
       items_hello[i].style.width = "30vw";
       items_hello[i].style.margin = "10px";
+      items_hello[i].style.opacity = "1";
     } else {
       items_hello[i].style.visibility = "hidden";
       items_hello[i].style.width = "0px";
       items_hello[i].style.margin = "10px 0px";
+      items_hello[i].style.opacity = "0";
     }
   }
 }
@@ -254,10 +261,12 @@ function switch_poster() {
       items_poster[i].style.visibility = "visible";
       items_poster[i].style.width = "30vw";
       items_poster[i].style.margin = "10px";
+      items_poster[i].style.opacity = "1";
     } else {
       items_poster[i].style.visibility = "hidden";
       items_poster[i].style.width = "0px";
       items_poster[i].style.margin = "10px 0px";
+      items_poster[i].style.opacity = "0";
     }
   }
 }
@@ -268,10 +277,12 @@ function switch_webpage() {
       items_webpage[i].style.visibility = "visible";
       items_webpage[i].style.width = "30vw";
       items_webpage[i].style.margin = "10px";
+      items_webpage[i].style.opacity = "1";
     } else {
       items_webpage[i].style.visibility = "hidden";
       items_webpage[i].style.width = "0px";
       items_webpage[i].style.margin = "10px 0px";
+      items_webpage[i].style.opacity = "0 ";
     }
   }
 }
@@ -282,10 +293,12 @@ function switch_other() {
       items_other[i].style.visibility = "visible";
       items_other[i].style.width = "30vw";
       items_other[i].style.margin = "10px";
+      items_other[i].style.opacity = "1";
     } else {
       items_other[i].style.visibility = "hidden";
       items_other[i].style.width = "0px";
       items_other[i].style.margin = "10px 0px";
+      items_other[i].style.opacity = "0 ";
     }
   }
 }
@@ -296,10 +309,12 @@ function switch_cd() {
       items_cd[i].style.visibility = "visible";
       items_cd[i].style.width = "30vw";
       items_cd[i].style.margin = "10px";
+      items_cd[i].style.opacity = "1";
     } else {
       items_cd[i].style.visibility = "hidden";
       items_cd[i].style.width = "0px";
       items_cd[i].style.margin = "10px 0px";
+      items_cd[i].style.opacity = "0";
     }
   }
 }
@@ -340,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55237" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54976" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

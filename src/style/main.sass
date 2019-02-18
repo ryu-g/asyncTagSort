@@ -1,24 +1,17 @@
 *
+	font-family: sans-serif
 	user-select: none
 	margin: 0
 	padding: 0
+
 .selectable
 	user-select: auto
-
-
-// .stats
-// 	color: red
-
-h1
-	margin: 10px
 
 section
 	width: 80%
 	max-width: 1200px
 	margin: 0 auto
-
-// .stats
-// 	color: blue
+	padding: 5px
 
 input
 	display: none
@@ -35,6 +28,8 @@ input
 			color: #333
 			cursor: pointer
 			&::before
+				position: absolute
+				left: -5px
 				transition: 300ms
 				content:"- "
 				color: #fff
@@ -45,15 +40,11 @@ input
 			&::before
 				content:"- "
 				color: orange
-
-.stats
-	color: orange
-
 .itemList
 	display: flex
 	flex-wrap: wrap
-	// justify-content: space-around
 	.item
+		opacity: 1
 		max-width: 150px
 		max-height: 150px
 		width: 30vw
@@ -93,5 +84,4 @@ input
 		&:hover
 			transition: 100ms
 			box-shadow: none
-.stats
-	color: green
+
