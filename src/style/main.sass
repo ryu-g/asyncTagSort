@@ -1,3 +1,4 @@
+
 @import 'mixin'
 @import 'single'
 
@@ -10,6 +11,7 @@
 
 .selectable
 	user-select: auto
+
 
 body
 	margin: 0
@@ -50,11 +52,12 @@ input
 	flex-wrap: wrap
 	width: 80%
 	margin: 0 auto
+	position: sticky
+	top: 0
+	background-color: rgba(#fff, .8)
 	+max-SP
 		width: 100%
-		position: sticky
-		top: 0
-		background-color: rgba(#fff, .8)
+		padding: 0
 	.checker
 		text-align: center
 		margin: 10px

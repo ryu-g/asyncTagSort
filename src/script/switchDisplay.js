@@ -46,11 +46,11 @@ function switchDisplay(){
 	switch_other()
 	switch_cd()
 	switch_about()
-
 	if(!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked){
 		displayAllItems()
 	}
 }
+
 function switch_about(){
 	if( about.checked ){
 		box_about.style.visibility = "visible"
@@ -62,7 +62,6 @@ function switch_about(){
 		box_about.style.width = "100vw"
 		box_about.style.height = "0px"
 		box_about.style.color = "#fff"}
-
 }
 
 function displayAllItems(){

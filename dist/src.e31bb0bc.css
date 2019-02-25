@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .unselectable {
+=======
+* {
+  font-family: sans-serif;
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
   user-select: none;
 }
 
@@ -12,6 +17,7 @@
   user-select: auto;
 }
 
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
@@ -44,6 +50,8 @@ header img {
   }
 }
 
+=======
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
 section {
   width: 80%;
   max-width: 1200px;
@@ -83,7 +91,10 @@ input {
   cursor: pointer;
 }
 #sortController .checker label::before {
+<<<<<<< HEAD
   visibility: hidden;
+=======
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
   position: absolute;
   left: -5px;
   transition: 300ms;
@@ -104,6 +115,7 @@ input {
   color: orange;
 }
 
+<<<<<<< HEAD
 .about {
   background-color: #ec6711;
   transition: 250ms;
@@ -136,6 +148,8 @@ input {
   line-height: 2em;
 }
 
+=======
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
 .itemList {
   display: flex;
   flex-wrap: wrap;
@@ -145,10 +159,17 @@ input {
 }
 .itemList .item {
   opacity: 1;
+<<<<<<< HEAD
   max-width: 160px;
   max-height: 160px;
   width: 34vw;
   height: 34vw;
+=======
+  max-width: 150px;
+  max-height: 150px;
+  width: 30vw;
+  height: 30vw;
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
   margin: 10px;
 }
 .itemList .item:hover {
@@ -180,6 +201,7 @@ input {
   display: block;
 }
 .itemList .brank {
+<<<<<<< HEAD
   visibility: hidden;
 }
 
@@ -188,4 +210,12 @@ footer {
   text-align: center;
   padding: 20px;
   color: #fff;
+=======
+  display: block;
+  background-color: #ddd;
+}
+.itemList .brank:hover {
+  transition: 100ms;
+  box-shadow: none;
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
 }

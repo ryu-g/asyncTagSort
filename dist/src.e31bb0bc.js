@@ -217,6 +217,7 @@ function switchDisplay() {
 
   if (!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked) {
     displayAllItems();
+<<<<<<< HEAD
   }
 }
 
@@ -231,6 +232,8 @@ function switch_about() {
     box_about.style.width = "100vw";
     box_about.style.height = "0px";
     box_about.style.color = "#fff";
+=======
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
   }
 }
 
@@ -387,7 +390,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "55561" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57608" + '/');
+>>>>>>> 28036663b0a4c33bf330841112dccd0b8eeece0b
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
