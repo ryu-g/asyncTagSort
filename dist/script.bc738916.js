@@ -104,7 +104,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -136,7 +136,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -171,12 +171,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style/main.sass":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../style/main.sass":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"script/switchDisplay.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../script/switchDisplay.js":[function(require,module,exports) {
 var controller = document.getElementById('sortController');
 controller.addEventListener('click', switchDisplay, false);
 var hello = document.getElementById("hello");
@@ -194,20 +194,22 @@ var box_about = document.getElementsByClassName("about")[0];
 var itemWidth = "34vw";
 var itemHeight = "33vw";
 var mediaQuery = matchMedia('(max-width: 798px');
+handle(mediaQuery);
 mediaQuery.addListener(handle);
-var boxHeight = "280px";
+var boxHeight;
 
 function handle(mq) {
   if (mq.matches) {
-    boxHeight = "420px";
+    boxHeight = "370px";
   } else {
-    boxHeight = "280px";
+    boxHeight = "250px";
   }
 
   switch_about();
 }
 
 function switchDisplay() {
+  handle(mediaQuery);
   switch_hello();
   switch_poster();
   switch_webpage();
@@ -350,17 +352,13 @@ function switch_cd() {
     }
   }
 }
-},{}],"script/*.js":[function(require,module,exports) {
-module.exports = {
-  "switchDisplay": require("./switchDisplay.js")
-};
-},{"./switchDisplay.js":"script/switchDisplay.js"}],"index.js":[function(require,module,exports) {
+},{}],"../script/index.js":[function(require,module,exports) {
 "use strict";
 
-require("./style/main.sass");
+require("../style/main.sass");
 
-require("./script/*.js");
-},{"./style/main.sass":"style/main.sass","./script/*.js":"script/*.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./switchDisplay.js");
+},{"../style/main.sass":"../style/main.sass","./switchDisplay.js":"../script/switchDisplay.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -387,7 +385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53586" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -529,5 +527,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.map
+},{}]},{},["../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../script/index.js"], null)
+//# sourceMappingURL=/script.bc738916.map

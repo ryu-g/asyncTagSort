@@ -1,11 +1,11 @@
 {
-  "name": "asynctagsort",
+  "name": "19portfolio",
   "version": "1.0.0",
   "description": "try to sort items with async",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.pug --open",
-    "build": "parcel build src/index.pug --public-url ./ -d docs"
+    "dev": "parcel ./src/pug/index.pug --open",
+    "build": "parcel build ./src/pug/index.pug --public-url ./ -d docs"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,25 @@
+section {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+section.article {
+  min-height: 100vh;
+}
+section.article img.pic {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+section.article .text {
+  margin: 20px 0;
+  padding: 0;
+  line-height: 2em;
+}
+
 .unselectable {
   user-select: none;
 }
@@ -87,6 +109,7 @@ input {
   position: absolute;
   left: -5px;
   transition: 300ms;
+  color: #fff;
   content: "- ";
 }
 @media screen and (min-width: 768px) {
@@ -108,9 +131,14 @@ input {
   background-color: #ec6711;
   transition: 250ms;
   visibility: visible;
-  height: 280px;
   display: block;
+  height: 250px;
   color: #FFF;
+}
+@media screen and (max-width: 767px) {
+  .about {
+    height: 420px;
+  }
 }
 .about .content {
   padding: 40px 0;
@@ -123,7 +151,7 @@ input {
   padding: 10px 0;
 }
 .about .content .name .ja {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .about .content .name .en {
   margin-left: 10px;
@@ -140,7 +168,6 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: space-around;
   min-height: 100vh;
 }
 .itemList .item {
@@ -186,6 +213,7 @@ input {
 footer {
   background-color: #ec6711;
   text-align: center;
+  margin-top: 20px;
   padding: 20px;
   color: #fff;
 }

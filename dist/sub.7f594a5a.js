@@ -104,7 +104,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -136,7 +136,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -171,196 +171,16 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style/main.sass":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../style/main.sass":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"script/switchDisplay.js":[function(require,module,exports) {
-var controller = document.getElementById('sortController');
-controller.addEventListener('click', switchDisplay, false);
-var hello = document.getElementById("hello");
-var items_hello = document.getElementsByClassName('hello');
-var poster = document.getElementById("poster");
-var items_poster = document.getElementsByClassName('poster');
-var webpage = document.getElementById("webpage");
-var items_webpage = document.getElementsByClassName('webpage');
-var other = document.getElementById("other");
-var items_other = document.getElementsByClassName('other');
-var cd = document.getElementById("cd");
-var items_cd = document.getElementsByClassName('cd');
-var about = document.getElementById("about");
-var box_about = document.getElementsByClassName("about")[0];
-var itemWidth = "34vw";
-var itemHeight = "33vw";
-var mediaQuery = matchMedia('(max-width: 798px');
-mediaQuery.addListener(handle);
-var boxHeight = "280px";
-
-function handle(mq) {
-  if (mq.matches) {
-    boxHeight = "420px";
-  } else {
-    boxHeight = "280px";
-  }
-
-  switch_about();
-}
-
-function switchDisplay() {
-  switch_hello();
-  switch_poster();
-  switch_webpage();
-  switch_other();
-  switch_cd();
-  switch_about();
-
-  if (!hello.checked && !poster.checked && !webpage.checked && !other.checked && !cd.checked) {
-    displayAllItems();
-  }
-}
-
-function switch_about() {
-  if (about.checked) {
-    box_about.style.visibility = "visible";
-    box_about.style.width = "100vw";
-    box_about.style.height = boxHeight;
-    box_about.style.color = "#fff";
-  } else {
-    box_about.style.visibility = "hidden";
-    box_about.style.width = "100vw";
-    box_about.style.height = "0px";
-    box_about.style.color = "#fff";
-  }
-}
-
-function displayAllItems() {
-  for (var i = 0; i < items_hello.length; i++) {
-    items_hello[i].style.visibility = "visible";
-    items_hello[i].style.width = itemWidth;
-    items_hello[i].style.margin = "10px";
-    items_hello[i].style.opacity = "1";
-  }
-
-  for (var _i = 0; _i < items_poster.length; _i++) {
-    items_poster[_i].style.visibility = "visible";
-    items_poster[_i].style.width = itemWidth;
-    items_poster[_i].style.margin = "10px";
-    items_poster[_i].style.opacity = "1";
-  }
-
-  for (var _i2 = 0; _i2 < items_webpage.length; _i2++) {
-    items_webpage[_i2].style.visibility = "visible";
-    items_webpage[_i2].style.width = itemWidth;
-    items_webpage[_i2].style.margin = "10px";
-    items_webpage[_i2].style.opacity = "1";
-  }
-
-  for (var _i3 = 0; _i3 < items_other.length; _i3++) {
-    items_other[_i3].style.visibility = "visible";
-    items_other[_i3].style.width = itemWidth;
-    items_other[_i3].style.margin = "10px";
-    items_other[_i3].style.opacity = "1";
-  }
-
-  for (var _i4 = 0; _i4 < items_cd.length; _i4++) {
-    items_cd[_i4].style.visibility = "visible";
-    items_cd[_i4].style.width = itemWidth;
-    items_cd[_i4].style.margin = "10px";
-    items_cd[_i4].style.opacity = "1";
-  }
-}
-
-function switch_hello() {
-  for (var i = 0; i < items_hello.length; i++) {
-    if (hello.checked) {
-      items_hello[i].style.visibility = "visible";
-      items_hello[i].style.width = itemWidth;
-      items_hello[i].style.margin = "10px";
-      items_hello[i].style.opacity = "1";
-    } else {
-      items_hello[i].style.visibility = "hidden";
-      items_hello[i].style.width = "0px";
-      items_hello[i].style.margin = "10px 0px";
-      items_hello[i].style.opacity = "0";
-    }
-  }
-}
-
-function switch_poster() {
-  for (var i = 0; i < items_poster.length; i++) {
-    if (poster.checked) {
-      items_poster[i].style.visibility = "visible";
-      items_poster[i].style.width = itemWidth;
-      items_poster[i].style.margin = "10px";
-      items_poster[i].style.opacity = "1";
-    } else {
-      items_poster[i].style.visibility = "hidden";
-      items_poster[i].style.width = "0px";
-      items_poster[i].style.margin = "10px 0px";
-      items_poster[i].style.opacity = "0";
-    }
-  }
-}
-
-function switch_webpage() {
-  for (var i = 0; i < items_webpage.length; i++) {
-    if (webpage.checked) {
-      items_webpage[i].style.visibility = "visible";
-      items_webpage[i].style.width = itemWidth;
-      items_webpage[i].style.margin = "10px";
-      items_webpage[i].style.opacity = "1";
-    } else {
-      items_webpage[i].style.visibility = "hidden";
-      items_webpage[i].style.width = "0px";
-      items_webpage[i].style.margin = "10px 0px";
-      items_webpage[i].style.opacity = "0 ";
-    }
-  }
-}
-
-function switch_other() {
-  for (var i = 0; i < items_other.length; i++) {
-    if (other.checked) {
-      items_other[i].style.visibility = "visible";
-      items_other[i].style.width = itemWidth;
-      items_other[i].style.margin = "10px";
-      items_other[i].style.opacity = "1";
-    } else {
-      items_other[i].style.visibility = "hidden";
-      items_other[i].style.width = "0px";
-      items_other[i].style.margin = "10px 0px";
-      items_other[i].style.opacity = "0 ";
-    }
-  }
-}
-
-function switch_cd() {
-  for (var i = 0; i < items_cd.length; i++) {
-    if (cd.checked) {
-      items_cd[i].style.visibility = "visible";
-      items_cd[i].style.width = itemWidth;
-      items_cd[i].style.margin = "10px";
-      items_cd[i].style.opacity = "1";
-    } else {
-      items_cd[i].style.visibility = "hidden";
-      items_cd[i].style.width = "0px";
-      items_cd[i].style.margin = "10px 0px";
-      items_cd[i].style.opacity = "0";
-    }
-  }
-}
-},{}],"script/*.js":[function(require,module,exports) {
-module.exports = {
-  "switchDisplay": require("./switchDisplay.js")
-};
-},{"./switchDisplay.js":"script/switchDisplay.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../script/sub.js":[function(require,module,exports) {
 "use strict";
 
-require("./style/main.sass");
-
-require("./script/*.js");
-},{"./style/main.sass":"style/main.sass","./script/*.js":"script/*.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("../style/main.sass");
+},{"../style/main.sass":"../style/main.sass"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -387,7 +207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53586" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -529,5 +349,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.map
+},{}]},{},["../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../script/sub.js"], null)
+//# sourceMappingURL=/sub.7f594a5a.map

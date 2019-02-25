@@ -354,7 +354,7 @@ function switch_cd() {
 module.exports = {
   "switchDisplay": require("./switchDisplay.js")
 };
-},{"./switchDisplay.js":"script/switchDisplay.js"}],"index.js":[function(require,module,exports) {
+},{"./switchDisplay.js":"script/switchDisplay.js"}],"sub.js":[function(require,module,exports) {
 "use strict";
 
 require("./style/main.sass");
@@ -529,5 +529,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.map
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","sub.js"], null)
+//# sourceMappingURL=/sub.400f0974.map
